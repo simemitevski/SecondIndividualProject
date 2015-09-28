@@ -32,5 +32,7 @@ namespace OnlineSurveys.Core.Models
 
         public virtual User User { get; set; }
         public virtual ICollection<UserWhoTookTheSurvey> UsersWhoTookSurvey { get; set; }
+        public virtual ICollection<Question> Questions { get; set; }
+
     }
 }
