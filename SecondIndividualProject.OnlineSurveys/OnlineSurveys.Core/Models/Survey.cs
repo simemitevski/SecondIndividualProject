@@ -13,7 +13,7 @@ namespace OnlineSurveys.Core.Models
         public string Title { get; set; }
 
         [Required]
-        [StringLength(50, MinimumLength = 1)]
+        [StringLength(250, MinimumLength = 1)]
         public string Description { get; set; }
 
         [Required]
@@ -21,7 +21,7 @@ namespace OnlineSurveys.Core.Models
         public string Publisher { get; set; }
 
         [Required]
-        [StringLength(50, MinimumLength = 1)]
+        [StringLength(250, MinimumLength = 1)]
         public string Purpose { get; set; }
 
         [DataType(DataType.Date), Display(Name = "Date Created")]
@@ -30,6 +30,7 @@ namespace OnlineSurveys.Core.Models
         [DataType(DataType.Date), Display(Name = "Valid Until")]
         public DateTime ValidUntil { get; set; }
 
+        public bool IsApproved { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<UserWhoTookTheSurvey> UsersWhoTookSurvey { get; set; }
         public virtual ICollection<Question> Questions { get; set; }

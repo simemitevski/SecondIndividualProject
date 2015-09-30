@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnlineSurveys.Core.Models
 {
@@ -16,9 +13,11 @@ namespace OnlineSurveys.Core.Models
         public Guid Id { get; protected set; }
         public string QuestionName { get; set; }
         public TypeOfQuestion TypeOfQuestion { get; set; }
-        public int QuestionNumber { get; set; }
+        public int QuestionNumber { get; set; } //Number for sorting
         public virtual Survey Survey { get; set; }
         public ICollection<TextAnswer> TxTextAnswers { get; set; }
-        public ICollection<BoolAnswer> BoolAnswers { get; set; } 
+        public ICollection<BoolAnswer> BoolAnswers { get; set; }
+        public ICollection<StarRatingAnswer> StarRatingAnswers { get; set; }
+        public ICollection<MatrixRatingAnswer> MatrixRatingAnswers { get; set; } 
     }
 }
