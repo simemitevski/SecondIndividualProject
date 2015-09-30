@@ -10,13 +10,15 @@ namespace OnlineSurveys.Core.Models
     {
         Text, MultiChoice, OneChoice, DropDownOneSelect, StarRating, MatrihRating
     }
+
     public class Question
     {
         public Guid Id { get; protected set; }
-        public string TxtQuestion { get; set; }
+        public string QuestionName { get; set; }
         public TypeOfQuestion TypeOfQuestion { get; set; }
+        public int QuestionNumber { get; set; }
         public virtual Survey Survey { get; set; }
         public ICollection<TextAnswer> TxTextAnswers { get; set; }
-        public ICollection<Answer> Answers { get; set; } 
+        public ICollection<BoolAnswer> BoolAnswers { get; set; } 
     }
 }
