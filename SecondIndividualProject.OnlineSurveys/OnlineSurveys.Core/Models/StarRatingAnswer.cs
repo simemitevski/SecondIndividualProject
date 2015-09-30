@@ -3,9 +3,8 @@
 namespace OnlineSurveys.Core.Models
 {
 
-    public class StarRatingAnswer
+    public class StarRatingAnswer : BaseModel
     {
-        public Guid Id { get; set; }
         public string ForTypeOfQuestion { get; set; }
         public virtual Question Question { get; set; }
         public Guid ForSurveyId { get; set; } //Id od anketata vo koja se naoga odgovorot

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurveys.Core", "OnlineSurveys.Core\OnlineSurveys.Core.csproj", "{3E2EFD82-6688-4871-B766-5D123EF326EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlinceSurveys.Infrastructure", "OnlinceSurveys.Infrastructure\OnlinceSurveys.Infrastructure.csproj", "{4F24BE41-72E4-4666-8639-AC079BFE5C84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3E2EFD82-6688-4871-B766-5D123EF326EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E2EFD82-6688-4871-B766-5D123EF326EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E2EFD82-6688-4871-B766-5D123EF326EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

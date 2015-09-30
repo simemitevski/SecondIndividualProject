@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OnlineSurveys.Core.Models
 {
-    public class Survey
+    public class Survey : BaseModel
     {
-        public Guid Id { get; protected set; }
-
         [Required]
         [StringLength(50, MinimumLength = 1)]
         public string Title { get; set; }

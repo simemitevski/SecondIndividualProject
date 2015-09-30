@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IBaseRepository.cs" />
+    <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\BoolAnswer.cs" />
     <Compile Include="Models\MatrixRatingAnswer.cs" />
     <Compile Include="Models\Question.cs" />

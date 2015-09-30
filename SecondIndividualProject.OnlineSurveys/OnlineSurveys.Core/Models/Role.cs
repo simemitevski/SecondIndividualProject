@@ -4,10 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OnlineSurveys.Core.Models
 {
-    public class Role
+    public class Role : BaseModel
     {
-        public Guid Id { get; protected set; }
-
         [Required]
         public string RoleName { get; set; }
         public virtual ICollection<User> Users { get; set; }

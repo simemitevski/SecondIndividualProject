@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OnlineSurveys.Core.Interfaces
 {
-    interface IBaseRepository<TEntity>
+    public interface IBaseRepository<TEntity>
         where TEntity : class
     {
         void Add(TEntity entity);
@@ -11,5 +11,6 @@ namespace OnlineSurveys.Core.Interfaces
         void Delete(TEntity entiy);
         TEntity GetById(Guid id);
         IList<TEntity> GetAll();
+        void Save();
     }
 }
