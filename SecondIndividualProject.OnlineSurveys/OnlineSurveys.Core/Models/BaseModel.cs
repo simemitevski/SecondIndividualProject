@@ -10,6 +10,6 @@ namespace OnlineSurveys.Core.Models
     public class BaseModel
     {
         [Key]
-        public Guid Id { get; protected set; }
+        public Guid Id { get; set; }
     }
 }

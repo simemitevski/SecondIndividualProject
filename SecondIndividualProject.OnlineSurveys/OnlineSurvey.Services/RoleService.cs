@@ -27,5 +27,10 @@ namespace OnlineSurveys.Services
         {
             _roleRepository.Add(role);
         }
+
+        public void SaveChanges()
+        {
+            _roleRepository.Save();
+        }
     }
 }

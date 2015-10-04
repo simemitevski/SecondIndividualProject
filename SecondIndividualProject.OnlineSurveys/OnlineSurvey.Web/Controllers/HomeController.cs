@@ -1,5 +1,7 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 using System.Web.Mvc;
+using OnlineSurveys.Core.Models;
 using OnlineSurveys.Infrastructure;
 using OnlineSurveys.Infrastructure.Repositories;
 using RoleService = OnlineSurveys.Services.RoleService;
@@ -21,6 +23,20 @@ namespace OnlineSurveys.Web.Controllers
         {
             var allRoles = _roleService.GetAll();
             return View(allRoles);
+        }
+        [HttpGet]
+        public ActionResult AddRole()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddRole(Role role)
+        {
+            role.Id = Guid.NewGuid();
+            _roleService.AddRole(role);
+            _roleService.SaveChanges();
+            return RedirectToAction("Index");
         }
 
 	}
