@@ -116,9 +116,9 @@
       <Project>{4f24be41-72e4-4666-8639-ac079bfe5c84}</Project>
       <Name>OnlinceSurveys.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OnlineSurvey.AppServices\OnlineSurvey.AppServices.csproj">
-      <Project>{226913e5-aee4-4aca-bd5d-c6825e37d8af}</Project>
-      <Name>OnlineSurvey.AppServices</Name>
+    <ProjectReference Include="..\OnlineSurvey.ApplicationServices\OnlineSurvey.ApplicationServices.csproj">
+      <Project>{d3e572ba-c0e2-4c8d-b815-6433f91b4510}</Project>
+      <Name>OnlineSurvey.ApplicationServices</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineSurveys.Core\OnlineSurveys.Core.csproj">
       <Project>{3e2efd82-6688-4871-b766-5d123ef326ef}</Project>
