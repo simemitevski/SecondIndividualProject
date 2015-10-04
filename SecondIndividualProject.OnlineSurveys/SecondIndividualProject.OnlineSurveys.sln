@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurveys.Core", "OnlineSurveys.Core\OnlineSurveys.Core.csproj", "{3E2EFD82-6688-4871-B766-5D123EF326EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlinceSurveys.Infrastructure", "OnlinceSurveys.Infrastructure\OnlinceSurveys.Infrastructure.csproj", "{4F24BE41-72E4-4666-8639-AC079BFE5C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurvey.AppServices", "OnlineSurvey.AppServices\OnlineSurvey.AppServices.csproj", "{226913E5-AEE4-4ACA-BD5D-C6825E37D8AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{560224F8-43A8-4262-9C8D-6A31FD951017}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurvey.Web", "OnlineSurvey.Web\OnlineSurvey.Web.csproj", "{F8A2D79B-3331-4692-9101-73941A59D490}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +27,19 @@ Global
 		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F24BE41-72E4-4666-8639-AC079BFE5C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226913E5-AEE4-4ACA-BD5D-C6825E37D8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226913E5-AEE4-4ACA-BD5D-C6825E37D8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226913E5-AEE4-4ACA-BD5D-C6825E37D8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226913E5-AEE4-4ACA-BD5D-C6825E37D8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A2D79B-3331-4692-9101-73941A59D490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A2D79B-3331-4692-9101-73941A59D490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A2D79B-3331-4692-9101-73941A59D490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A2D79B-3331-4692-9101-73941A59D490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8A2D79B-3331-4692-9101-73941A59D490} = {560224F8-43A8-4262-9C8D-6A31FD951017}
 	EndGlobalSection
 EndGlobal

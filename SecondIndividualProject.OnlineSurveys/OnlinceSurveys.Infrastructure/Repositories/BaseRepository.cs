@@ -10,8 +10,8 @@ namespace OnlinceSurveys.Infrastructure.Repositories
     public class BaseRepository<TEntity> : IBaseRepository<TEntity>
         where TEntity : BaseModel
     {
-        protected OnlineSurveysDbContext _context;
-        public BaseRepository(OnlineSurveysDbContext context)
+        protected OnlineSurveyContext _context;
+        public BaseRepository(OnlineSurveyContext context)
         {
             _context = context;
         }

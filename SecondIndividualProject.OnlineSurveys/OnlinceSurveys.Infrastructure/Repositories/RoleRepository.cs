@@ -5,7 +5,7 @@ namespace OnlinceSurveys.Infrastructure.Repositories
 {
     public class RoleRepository : BaseRepository<Role>, IRoleRepository
     {
-        public RoleRepository(OnlineSurveysDbContext context) : base(context)
+        public RoleRepository(OnlineSurveyContext context) : base(context)
         {
             
         }
