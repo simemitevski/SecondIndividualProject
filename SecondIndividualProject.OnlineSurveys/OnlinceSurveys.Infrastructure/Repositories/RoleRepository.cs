@@ -1,7 +1,7 @@
 ﻿using OnlineSurveys.Core.Interfaces;
 using OnlineSurveys.Core.Models;
 
-namespace OnlinceSurveys.Infrastructure.Repositories
+namespace OnlineSurveys.Infrastructure.Repositories
 {
     public class RoleRepository : BaseRepository<Role>, IRoleRepository
     {

@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Web;
-using System.Web.ApplicationServices;
+﻿using System.Configuration;
 using System.Web.Mvc;
-using OnlinceSurveys.Infrastructure;
-using OnlinceSurveys.Infrastructure.Repositories;
-using OnlineSurvey.ApplicationServices;
+using OnlineSurveys.Infrastructure;
+using OnlineSurveys.Infrastructure.Repositories;
+using RoleService = OnlineSurveys.Services.RoleService;
 
-namespace OnlineSurvey.Web.Controllers
+namespace OnlineSurveys.Web.Controllers
 {
     public class HomeController : Controller
     {
-        protected RoleServices _roleService;
+        protected RoleService _roleService;
         public HomeController()
         {
             string connString = ConfigurationManager.ConnectionStrings["OnlineSurveyDbConn"].ToString();
             var dbContext = new OnlineSurveyContext(connString);
             var roleRepo = new RoleRepository(dbContext);
-            _roleService = new RoleServices(roleRepo);
+            _roleService = new RoleService(roleRepo);
 
         }
         public ActionResult Index()

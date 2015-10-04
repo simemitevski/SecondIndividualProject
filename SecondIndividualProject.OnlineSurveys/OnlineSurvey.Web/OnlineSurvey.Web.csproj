@@ -112,13 +112,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OnlinceSurveys.Infrastructure\OnlinceSurveys.Infrastructure.csproj">
+    <ProjectReference Include="..\OnlinceSurveys.Infrastructure\OnlineSurveys.Infrastructure.csproj">
       <Project>{4f24be41-72e4-4666-8639-ac079bfe5c84}</Project>
-      <Name>OnlinceSurveys.Infrastructure</Name>
+      <Name>OnlineSurveys.Infrastructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OnlineSurvey.ApplicationServices\OnlineSurvey.ApplicationServices.csproj">
-      <Project>{d3e572ba-c0e2-4c8d-b815-6433f91b4510}</Project>
-      <Name>OnlineSurvey.ApplicationServices</Name>
+    <ProjectReference Include="..\OnlineSurvey.Services\OnlineSurveys.Services.csproj">
+      <Project>{0a0f4e2f-1169-4985-9407-60d1a950c9fa}</Project>
+      <Name>OnlineSurveys.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineSurveys.Core\OnlineSurveys.Core.csproj">
       <Project>{3e2efd82-6688-4871-b766-5d123ef326ef}</Project>

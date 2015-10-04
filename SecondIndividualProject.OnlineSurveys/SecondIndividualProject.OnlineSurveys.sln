@@ -5,13 +5,13 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurveys.Core", "OnlineSurveys.Core\OnlineSurveys.Core.csproj", "{3E2EFD82-6688-4871-B766-5D123EF326EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlinceSurveys.Infrastructure", "OnlinceSurveys.Infrastructure\OnlinceSurveys.Infrastructure.csproj", "{4F24BE41-72E4-4666-8639-AC079BFE5C84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurveys.Infrastructure", "OnlinceSurveys.Infrastructure\OnlineSurveys.Infrastructure.csproj", "{4F24BE41-72E4-4666-8639-AC079BFE5C84}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{560224F8-43A8-4262-9C8D-6A31FD951017}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurvey.Web", "OnlineSurvey.Web\OnlineSurvey.Web.csproj", "{F8A2D79B-3331-4692-9101-73941A59D490}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurvey.ApplicationServices", "OnlineSurvey.ApplicationServices\OnlineSurvey.ApplicationServices.csproj", "{D3E572BA-C0E2-4C8D-B815-6433F91B4510}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineSurveys.Services", "OnlineSurvey.Services\OnlineSurveys.Services.csproj", "{0A0F4E2F-1169-4985-9407-60D1A950C9FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,10 @@ Global
 		{F8A2D79B-3331-4692-9101-73941A59D490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8A2D79B-3331-4692-9101-73941A59D490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8A2D79B-3331-4692-9101-73941A59D490}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3E572BA-C0E2-4C8D-B815-6433F91B4510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3E572BA-C0E2-4C8D-B815-6433F91B4510}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3E572BA-C0E2-4C8D-B815-6433F91B4510}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3E572BA-C0E2-4C8D-B815-6433F91B4510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0F4E2F-1169-4985-9407-60D1A950C9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0F4E2F-1169-4985-9407-60D1A950C9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0F4E2F-1169-4985-9407-60D1A950C9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0F4E2F-1169-4985-9407-60D1A950C9FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

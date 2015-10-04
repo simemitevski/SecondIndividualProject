@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OnlineSurveys.Core.Models;
 
-namespace OnlinceSurveys.Infrastructure
+namespace OnlineSurveys.Infrastructure
 {
     public class OnlineSurveyContext : DbContext
     {
