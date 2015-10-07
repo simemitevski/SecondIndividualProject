@@ -1,33 +1,25 @@
-﻿@model IEnumerable<OnlineSurveys.Core.Models.Role>
+﻿<script src="~/Scripts/MyScripts/MenageRoles.js"></script>
+<br/>
+<br/>
+<br/>
+<a href="#" id="createNewRole"> Create New </a>
 
-@{
-    ViewBag.Title = "Index";
-}
+<div id="addrole_part" style="display: none;">
+    <label for="txt_rolename">Role Name:</label>
+    <input type="text" id="txt_rolename" class="form-control" style="width: 100px;"/>
+    <button type="button" class="btn btn-primary" id="btn_addrole">Submit</button>
+</div>
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "AddRole")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.RoleName)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RoleName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
+<div id="listofroles_part">
+    <table id="tbl_listofroles">
+        <thead>
+            <tr>
+                <th>Role Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
