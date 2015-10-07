@@ -28,6 +28,12 @@ namespace OnlineSurveys.Services
             _roleRepository.Add(role);
         }
 
+        public void Delete(Guid id)
+        {
+            var roleToDelete = _roleRepository.GetById(id);
+            _roleRepository.Delete(roleToDelete);
+        }
+
         public void SaveChanges()
         {
             _roleRepository.Save();

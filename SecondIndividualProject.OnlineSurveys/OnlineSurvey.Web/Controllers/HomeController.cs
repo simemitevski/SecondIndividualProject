@@ -41,9 +41,15 @@ namespace OnlineSurveys.Web.Controllers
             };
             _roleService.AddRole(r);
             _roleService.SaveChanges();
-            return Json("OK");
+            return Json("Added");
         }
 
+        [HttpPost]
+        public JsonResult DeleteRole(Role modelToDelete)
+        {
+            _roleService.Delete(modelToDelete.Id);
+            return Json("Deleted");
+        }
 
         //public ActionResult Index()
         //{
