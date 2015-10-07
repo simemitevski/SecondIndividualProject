@@ -1,10 +1,19 @@
-﻿$(document).ready(function () {
+﻿$(document).on('click', '.btn_deleterole', function() {
+    var Id = $(this).attr('id');
+    DeleteRole(Id);
+});
+$(document).ready(function () {
     var path = window.location.host;
     getallroles($("#tbl_listofroles > tbody"));
 
     $("#createNewRole").click(function () {
         $("#addrole_part").show();
         $("#listofroles_part").hide();
+    });
+
+    $(".btn_deleterole").click(function() {
+        var Id = $(this).attr('id');
+        DeleteRole(Id);
     });
 
     $("#btn_canceladding").click(function () {
@@ -53,13 +62,13 @@ function getallroles(wheretoappent) {
         success: function (d) {
             var i;
             for (i = 0; i < d.length; i++) {
-                var obj = {
-                    Id: d[i].Id,
-                    RoleName: d[i].RoleName
-                }
+                //var obj = {
+                //    Id: d[i].Id,
+                //    RoleName: d[i].RoleName
+                //}
                 strtoappend += "<tr>" +
                                     "<td>" + d[i].RoleName + "</td>" +
-                                    "<td>" + "<button type='button' class='btn btn-primary' onclick='DeleteRole(" + obj +")'>Delete</button>" + "</td>" +
+                                    "<td>" + "<button type='button' class='btn btn-primary btn_deleterole' id='"+ d[i].Id+"'>Delete</button>" + "</td>" +
                                "</tr>";
             }
             wheretoappent.html(strtoappend);

@@ -45,9 +45,10 @@ namespace OnlineSurveys.Web.Controllers
         }
 
         [HttpPost]
-        public JsonResult DeleteRole(Role modelToDelete)
+        public JsonResult DeleteRole(string modelToDelete)
         {
-            _roleService.Delete(modelToDelete.Id);
+            var id = new Guid(modelToDelete);
+            _roleService.Delete(id);
             return Json("Deleted");
         }
 
