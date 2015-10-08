@@ -69,6 +69,9 @@ $(document).ready(function () {
     //search user email for which you like to add new role (using autocomlete)
     $("#txt_usersemailautocompl").autocomplete({
         source: '/Home/GetAllUsers',
+        select: function(event, ui) {
+            alert(ui.item.label);
+        },
         minLength: 1,
         delay: 500
     });

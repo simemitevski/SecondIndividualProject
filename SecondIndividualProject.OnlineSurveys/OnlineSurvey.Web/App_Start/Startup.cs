@@ -6,7 +6,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace OnlineSurvey.Web.App_Start
+namespace OnlineSurvey.Web
 {
     public class Startup
     {
