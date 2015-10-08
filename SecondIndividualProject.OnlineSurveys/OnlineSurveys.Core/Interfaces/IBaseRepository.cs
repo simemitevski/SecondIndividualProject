@@ -17,7 +17,8 @@ namespace OnlineSurveys.Core.Interfaces
 
     public interface IUserRepository : IBaseRepository<User>
     {
-
+        bool CheckIfExist(string email, string username);
+        bool IfExistUserWithTheseEmailAndPass(string email, string password);
     }
 
     public interface IRoleRepository : IBaseRepository<Role>

@@ -1,26 +1,44 @@
-﻿$(document).on('click', '.btn_deleterole', function() {
-    var Id = $(this).attr('id');
-    DeleteRole(Id);
+﻿
+$(document).on('click', '.btn_deleterole', function () {
+    var id = $(this).attr('id');
+    var name = $(this).closest('tr').children().first().text();
+    var rowtodelete = $(this).closest('tr');
+    fnDeleteDialog(id, name, rowtodelete);
 });
+
+$(document).on('click', '#btn_menagerols', function () {
+    $("#roleadministration_part").show();
+});
+
+$(document).on('click', '#btn_closeadminrolepart', function () {
+    $("#roleadministration_part").hide();
+});
+
 $(document).ready(function () {
     var path = window.location.host;
     getallroles($("#tbl_listofroles > tbody"));
 
-    $("#createNewRole").click(function () {
+    $("#btn_createNewRole").click(function () {
         $("#addrole_part").show();
+        $("#addroleforuser_part").hide();
         $("#listofroles_part").hide();
     });
 
-    $(".btn_deleterole").click(function() {
-        var Id = $(this).attr('id');
-        DeleteRole(Id);
+    //show part for adding rol for user
+    $("#btn_addroleforuser").click(function () {
+        $("#addrole_part").hide();
+        $("#addroleforuser_part").show();
+        $("#listofroles_part").hide();
     });
 
+    //cancel adding role
     $("#btn_canceladding").click(function () {
         $("#addrole_part").hide();
+        $("#addroleforuser_part").hide();
         $("#listofroles_part").show();
     });
 
+    //adding new role
     $("#btn_addrole").click(function () {
         if ($('#txt_rolename').val().trim() === "") {
             alert('Enter role name before submitting!!');
@@ -36,7 +54,6 @@ $(document).ready(function () {
                 dataType: "json",
                 data: role,
                 success: function(d) {
-                    if (d == "OK")
                         getallroles($("#tbl_listofroles > tbody"));
                 },
                 error: function(xhr, textStatus, errorThrown) {
@@ -47,6 +64,13 @@ $(document).ready(function () {
             $("#addrole_part").hide();
             $("#listofroles_part").show();
         }
+    });
+
+    //search user email for which you like to add new role (using autocomlete)
+    $("#txt_usersemailautocompl").autocomplete({
+        source: '/Home/GetAllUsers',
+        minLength: 1,
+        delay: 500
     });
 });
 
@@ -62,10 +86,6 @@ function getallroles(wheretoappent) {
         success: function (d) {
             var i;
             for (i = 0; i < d.length; i++) {
-                //var obj = {
-                //    Id: d[i].Id,
-                //    RoleName: d[i].RoleName
-                //}
                 strtoappend += "<tr>" +
                                     "<td>" + d[i].RoleName + "</td>" +
                                     "<td>" + "<button type='button' class='btn btn-primary btn_deleterole' id='"+ d[i].Id+"'>Delete</button>" + "</td>" +
@@ -79,36 +99,47 @@ function getallroles(wheretoappent) {
     });
 }
 
-function DeleteRole(modelToDelete) {
-    $.ajax({
-        type: "POST",
-        url: '/Home/DeleteRole',
-        dataType: "json", 
-        contentType: 'application/json; charset=utf-8',
-        data: modelToDelete,
-        async: true,
-        processData: false,
-        cache: false,
-        success: function (data) {
-            //alert(data);
-            $(function () {
-                $("#dialog-confirm").dialog({
-                    resizable: false,
-                    height: 140,
-                    modal: true,
-                    buttons: {
-                        "Yes delete this item": function () {
-                            $(this).dialog("close");
-                        },
-                        Cancel: function () {
-                            $(this).dialog("close");
-                        }
-                    }
-                });
-            });
-        },
-        error: function (xhr) {
-            alert('error');
+function fnDeleteDialog(id, rolename, rowtodelete) {
+    $("#dialog-confirm > p").empty()
+                            .append("<span class='ui-icon ui-icon-alert' style='float: left; margin: 0 7px 20px 0;'></span>" +
+                                    "<p>Are you sure that you want to delete this item? </p>" +
+                                    "<span class='ui-icon ui-icon-minus' style='float: left; margin: 0 7px 20px 0;'></span>" +
+                                    "Role Name: " +
+                                    rolename);
+
+    $("#dialog-confirm").dialog({
+        resizable: false,
+        modal: true,
+        //title: "Modal",
+        height: 200,
+        width: 300,
+        buttons: {
+            "Yes": function () {
+                $(this).dialog('close');
+                callback(true, id, rowtodelete);
+            },
+            "No": function () {
+                $(this).dialog('close');
+                callback(false);
+            }
         }
     });
+}
+
+function callback(value, modelToDelete, rowtodelete) {
+    if (value) {
+        //var baseurl = window.location.href;
+        $.ajax({
+            url: "/Home/DeleteRole/?modelToDelete=" + modelToDelete,
+            type: "Post",
+            success: function (data) {
+                alert('Deleted Successfully');
+                rowtodelete.remove();
+                //window.location.href = "Index";
+            },
+            error: function (msg) { alert(msg); }
+        });
+    } else {
+        alert("Rejected!");
+    }
 }
